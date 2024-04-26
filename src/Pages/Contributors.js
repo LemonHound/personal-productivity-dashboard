@@ -1,7 +1,7 @@
 import React from 'react'
-import '../Styles/Credits.css'
+import '../Styles/Contributors.css'
 
-function Credits() {
+function Contributors() {
 
     return (
         <>
@@ -43,4 +43,4 @@ function Credits() {
     )
 }
 
-export default Credits;
+export default Contributors;

@@ -8,7 +8,7 @@ import PageNotFound from './Pages/PageNotFound'
 import { UserContextProvider } from './Resources/UserContext.js'
 import AppBanner from './Pages/AppBanner'
 import SignIn from './Pages/SignIn'
-import Credits from './Pages/Credits'
+import Contributors from './Pages/Contributors'
 
 function App() {
 
@@ -23,7 +23,7 @@ function App() {
                         <div className="nav-options">
                             <Link to="/">Home</Link>&nbsp;
                             <Link to="/Projects">Ongoing Projects</Link>&nbsp;
-                            <Link to="/Credits">Credits</Link>&nbsp;
+                            <Link to="/Contributors">Contributors</Link>&nbsp;
                         </div>
                         <div className="nav-options">
                             <Link to="/SignIn">Sign In</Link>
@@ -35,7 +35,7 @@ function App() {
                         <Route path='/Projects' element={<Projects />} />
                         <Route path='/*' element={<PageNotFound />} />
                         <Route path='/SignIn' element={<SignIn />} />
-                        <Route path='/Credits' element={<Credits />} />
+                        <Route path='/Contributors' element={<Contributors />} />
                     </Routes>
                 </BrowserRouter>
             </UserContextProvider>
