@@ -1,0 +1,27 @@
+* {
+}
+
+.sign-in-card {
+    background-color: black;
+    color: white;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 20px;
+}
+
+input {
+    padding: 20px;
+    border-radius: 5px;
+    border: solid;
+    width: 250px;
+}
+
+textArea {
+    padding: 20px;
+    border-radius: 5px;
+    border: solid;
+    width: 400px;
+    height: 200px;
+}
