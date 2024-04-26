@@ -30,14 +30,6 @@ function Contributors() {
 
                     </h3>
                 </div>
-                <div className="contributor">
-                    <h2 className="name-card">
-                        Matt Kavicky
-                    </h2>
-                    <h3 className="details">
-
-                    </h3>
-                </div>
             </div>
         </>
     )
