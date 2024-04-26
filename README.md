@@ -1,10 +1,25 @@
-# Getting Started with Create React App
+# Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## To work with this website, you'll need the following:
+### Node.js
+You can download and install Node.js from https://nodejs.org/en/download.
+
+### NPM
+Though NPM is automatically included in the Node.js package, it needs to be installed to your project.  
+1. Navigate to the repository folder (the one immediately above the /src/ folder)
+2. Open terminal, git bash, or cmd at this location
+3. Run the command "npm install"
+
+### SQLITE3
+If you're more of a UI kind of person, you can download and install SQLite from the open source website:  https://www.sqlite.org/download.html
+Alternatively, you can download and install it using terminal, cmd, or git bash:
+- npm install sqlite3
+
 ## Available Scripts
 
-In the project directory, you can run:
+To boot up our website, you'll need to run two different terminals.  One will host our website, and the other will host the SQLite database.
 
 ### `npm start`
 
@@ -13,6 +28,19 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+### `node database.js`
+
+Runs the SQLite database.
+You will either need to navigate to the /database/ folder with terminal before running this command, or include the folder path from the current location.
+
+For example, if you open terminal in the /src/ folder, you could run the command like this:
+node .\Database\database.js
+
+
+## Additional Scripts and Tools
+
+In addition to building and running the website, you can also use the commands below to execute test cases, build the app, check for issues, and many other things.
 
 ### `npm test`
 
