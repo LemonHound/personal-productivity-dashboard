@@ -1,0 +1,82 @@
+
+/*
+    Basic Styling
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-header {
+    display: flex;
+    color: white;
+    background-color: darkslategray;
+}
+
+.user-info {
+    flex: 4;
+    padding: 40px;
+}
+
+.profile-pic {
+    flex: 1;
+    padding: 0px;
+}
+
+.project-title {
+    text-align: center;
+    align-content: center;
+    padding: 20px;
+    flex: 3;
+}
+
+.project-page {
+    text-align: center;
+    align-content: center;
+    flex: 3;
+}
+
+/*
+    Navigation Bar
+*/
+nav {
+    justify-content: space-between;
+    padding: 2%;
+    border-radius: 0px;
+    background-color: black;
+}
+
+.nav-brand {
+    font-family: 'Segoe UI';
+    color: white;
+    background-color: black;
+}
+
+.nav-options a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+}
+
+
+/*
+    User Interface
+*/
+
+button {
+    background-color: maroon;
+    color: white;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 0px;
+}
