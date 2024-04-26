@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.contributor {
+    flex: content;
+    align-content: space-between;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    min-width: 25%;
+}
+
+.name-card {
+    font-family: 'Global Serif';
+}
+
+.details {
+    font-size:small;
+}

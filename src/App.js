@@ -8,6 +8,7 @@ import PageNotFound from './Pages/PageNotFound'
 import { UserContextProvider } from './Resources/UserContext.js'
 import AppBanner from './Pages/AppBanner'
 import SignIn from './Pages/SignIn'
+import Credits from './Pages/Credits'
 
 function App() {
 
@@ -22,20 +23,10 @@ function App() {
                         <div className="nav-options">
                             <Link to="/">Home</Link>&nbsp;
                             <Link to="/Projects">Ongoing Projects</Link>&nbsp;
+                            <Link to="/Credits">Credits</Link>&nbsp;
                         </div>
                         <div className="nav-options">
                             <Link to="/SignIn">Sign In</Link>
-                        </div>
-                    </nav>
-                    <nav className="flex-header">
-                        <div className="user-info">
-                            <h1>Kevin Zookski</h1>
-                            <p>Hey Visitor!  I'm Kevin and I helped design the UI of this website using modern React practices.
-                                I hope you have fun browsing around and checking out everything we worked so hard to make!
-                            </p>
-                        </div>
-                        <div className="profile-pic">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc--udEPuMNsbmKGKY7GGdQUu3nQWmkka5H_XtCx3zGA&s" alt="" />
                         </div>
                     </nav>
                     <br />
@@ -44,6 +35,7 @@ function App() {
                         <Route path='/Projects' element={<Projects />} />
                         <Route path='/*' element={<PageNotFound />} />
                         <Route path='/SignIn' element={<SignIn />} />
+                        <Route path='/Credits' element={<Credits />} />
                     </Routes>
                 </BrowserRouter>
             </UserContextProvider>
