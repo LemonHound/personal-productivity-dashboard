@@ -1,7 +1,6 @@
 import '../Styles/SignIn.css';
 import React, { useState } from 'react';
 import { useUserContext } from '../Resources/UserContext'
-import useAPIHandler from '../APIs/APIHandler'
 
 
 function SignIn() {
@@ -12,13 +11,6 @@ function SignIn() {
     const { updateData } = useUserContext();
 
     async function LogIn() {
-
-        try {
-            const users = await useAPIHandler("fullUserDownload");
-            console.log(users.current);
-        } catch (error) {
-            console.error("Error fetching data:", error);
-        }
 
         updateData('displayName', displayName);
         setDisplayName("");

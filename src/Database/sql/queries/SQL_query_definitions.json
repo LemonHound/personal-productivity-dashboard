@@ -1,0 +1,6 @@
+{
+  "FullUserDownload": {
+    "folder": "/sql/queries/Users/",
+    "query": "FullUserDownload.sql"
+  }
+}

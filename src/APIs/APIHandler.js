@@ -1,34 +1,13 @@
-import React, { useRef, useEffect } from 'react';
+import axios from 'axios';
 
-function useAPIHandler(value) {
+const API_BASE_URL = 'http://localhost:3001/api'; // Replace with the backend server's URL
 
-    const APIURL = "http://localhost:3001/api/";
-
-    console.log(APIURL + value);
-
-    const output = useRef(null);
-
-
-    useEffect(() => {
-        // Fetch data from the backend when the component mounts
-        fetch(APIURL + value) // Use the const URL + connector targeted from the page calling this handler'
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log("data received: ", data);
-                output.current = data;
-            })
-            .catch(error => {
-                // Handle fetch errors
-                console.error('Fetch error: ', error);
-            });
-    }, [value]); // Empty dependency array ensures the effect runs only once
-
-    return output;
-}
-
-export default useAPIHandler;
+export const getAllUsers = async () => {
+    try {
+        const response = await axios.get(`${API_BASE_URL}/Users/FullUserDownload`);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching user data:', error);
+        throw error; // Rethrow the error to be handled by the caller
+    }
+};
