@@ -24,6 +24,11 @@ CORS is a package used for enabling Cross-Origin Resource Sharing in Express.js 
 2. Run the following command to install the cors package:
 -- `npm install cors`
 
+### AXIOS
+AXIOS is a popular JavaScript library used for making HTTP requests from a web browser or Node.js.  You can install it using NPM, like with other packages
+1. Run the following command to install AXIOS:
+-- `npm install axios`
+
 ## Available Scripts
 
 To boot up our website, you'll need to run two different terminals.  One will host our website, and the other will host the SQLite database.
