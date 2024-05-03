@@ -10,7 +10,7 @@ You can download and install Node.js from https://nodejs.org/en/download.
 Though NPM is automatically included in the Node.js package, it needs to be installed to your project.  
 1. Navigate to the repository folder (the one immediately above the /src/ folder)
 2. Open terminal, git bash, or cmd at this location
-3. Run the command "npm install"
+3. Run the command `npm install`
 
 ### SQLITE3
 If you're more of a UI kind of person, you can download and install SQLite from the open source website:  https://www.sqlite.org/download.html
@@ -22,11 +22,13 @@ Alternatively, you can download and install it using terminal, cmd, or git bash:
 CORS is a package used for enabling Cross-Origin Resource Sharing in Express.js applications, which allows you to make requests from one domain to another domain in the browser.
 1. Navigate to the directory where your database.js script is located.  (This is the \database\ folder, directly underneath \src\)
 2. Run the following command to install the cors package:
+
 -- `npm install cors`
 
 ### AXIOS
 AXIOS is a popular JavaScript library used for making HTTP requests from a web browser or Node.js.  You can install it using NPM, like with other packages
 1. Run the following command to install AXIOS:
+
 -- `npm install axios`
 
 ## Available Scripts
