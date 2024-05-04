@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { getAllTasks } from '../APIs/APIHandler'
 
-const CreateNewTask = () => {
+
+const TaskView = () => {
+
     const [tasks, setTasks] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -18,14 +20,24 @@ const CreateNewTask = () => {
     }, []);
 
     while (isLoading) {
-        
+        return <p>Loading tasks...</p>
     }
 
     return (
-        <div>
-
-        </div>
+        <>
+            <div className="flex-body-left">
+                {tasks.map((task) => (
+                    <div className="task">
+                    <div key={task.task_id}>
+                        <h2>{task.name}</h2>
+                        <p>{task.description}</p>
+                        </div>
+                    </div>
+                ))
+                }
+            </div>
+        </>
     );
-};
+}
 
-export default CreateNewTask;
+export default TaskView

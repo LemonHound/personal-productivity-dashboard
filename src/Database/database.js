@@ -65,6 +65,25 @@ app.get('/api/Users/FullUserDownload', async (req, res) => {
 
 });
 
+app.get('/api/Tasks/GetAllTasks', async (req, res) => {
+
+    try {
+        const query = await readQueryFromFile("FullTaskDownload");
+        db.all(query, (err, rows) => {
+            if (err) {
+                console.log("fatal error with the query GetAllTasks");
+                res.status(500).json({ error: err.message });
+                return;
+            }
+            res.json(rows);
+        })
+    } catch (error) {
+        console.error("Error reading query from file: ", error);
+        res.status(500).json({ error: "Error reading query from file" });
+    }
+
+});
+
 /*
 ** OPEN SERVER
 */
