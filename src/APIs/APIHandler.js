@@ -11,3 +11,13 @@ export const getAllUsers = async () => {
         throw error; // Rethrow the error to be handled by the caller
     }
 };
+
+export const getAllTasks = async () => {
+    try {
+        const response = await axios.get(`${API_BASE_URL}/Tasks/GetAllTasks`);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching user data:', error);
+        throw error; // Rethrow the error to be handled by the caller
+    }
+};

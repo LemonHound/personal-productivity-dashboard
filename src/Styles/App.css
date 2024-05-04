@@ -1,35 +1,65 @@
 
 /*
-    Basic Styling
+    Global Styling
 */
+
+/* global colors */
+:root {
+    --background-dark: #363636;
+    --background-light: #7ac377;
+    --text-dark: #14191f;
+    --text-light: #ffffff;
+    --button-dark: #002e00;
+    --button-light: #8cff96;
+    --border-dark: #000000;
+    --border-light: #ffffff;
+}
 
 * {
     margin: 10px;
     padding: 10px;
-    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+}
 
+.general {
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid var(--border-dark);
+    box-shadow: 0px 2px 4px var(--border-light);
+    
+    &:hover {
+        border-color: var(--border-light);
+    }
+    &:focus {
+        outline: none;
+        border-color: var(--border-light);
+        box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3);
+    }
+}
+
+.flex-body-left {
+    width: 60%;
+    height: 80vh; /* 80% of the viewport height */
+    float: left; /* occupies the left portion */
+    background-color: var(--background-light);
+    color: var(--text-dark);
 }
 
 .flex {
+    background-color: var(--background-dark);
+    color: var(--text-light);
     display: flex;
     flex-direction: row;
 }
 
 .flex-header {
+    background-color: var(--background-dark);
+    color: var(--text-light);
     display: flex;
-    color: white;
-    background-color: darkslategray;
 }
 
-.user-info {
-    flex: 4;
-    padding: 40px;
-}
-
-.profile-pic {
-    flex: 1;
-    padding: 0px;
-}
 
 .project-title {
     text-align: center;
@@ -39,33 +69,42 @@
 }
 
 .project-page {
+    background-color: var(--background-dark);
+    color: var(--text-light);
     text-align: center;
     align-content: center;
     flex: 3;
+}
+
+.task{
+    border: solid;
+    border-width: 1px;
 }
 
 /*
     Navigation Bar
 */
 nav {
+    background-color: var(--background-dark);
+    color: var(--text-light);
     justify-content: space-between;
     padding: 2%;
     border-radius: 0px;
-    background-color: black;
 }
 
 .nav-brand {
-    font-family: 'Segoe UI';
-    color: white;
-    background-color: black;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    color: var(--text-light);
+    background-color: var(--background);
 }
 
 .nav-options a {
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
-    color: white;
-    background-color: black;
+    color: var(--text-dark);
+    background-color: var(--background-light);
 }
 
 
@@ -74,10 +113,10 @@ nav {
 */
 
 button {
-    background-color: maroon;
-    color: white;
+    background-color: var(--button-light);
+    color: var(--text-dark);
     padding: 10px 15px;
     margin: 10px;
     border-radius: 5px;
-    border: 0px;
+    border: 2px;
 }

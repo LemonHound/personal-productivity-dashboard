@@ -1,6 +1,8 @@
 import React, {useState } from 'react'
 import '../Styles/HomePage.css'
 import CreateNewTask from './CreateNewTask'
+import TaskView from './TaskView'
+
 
 function Home() {
 
@@ -8,10 +10,16 @@ function Home() {
 
 
     return (
-        <>
-            <button onClick={() => setShowCreateTask(!isShowCreateTask)}>Show Task Creation</button>
-            {isShowCreateTask ? <CreateNewTask/> : <div></div>}
-        </>
+        <div className="general">
+            <button onClick={() => setShowCreateTask(!isShowCreateTask)}>Create New Task</button>
+            {isShowCreateTask ?
+                <CreateNewTask />
+                :
+                <div></div>}
+
+            <TaskView/>
+
+        </div>
     )
 }
 

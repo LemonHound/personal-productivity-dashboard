@@ -2,5 +2,9 @@
   "FullUserDownload": {
     "folder": "/sql/queries/Users/",
     "query": "FullUserDownload.sql"
+  },
+  "FullTaskDownload": {
+    "folder": "/sql/queries/Tasks/",
+    "query": "FullTaskDownload.sql"
   }
 }

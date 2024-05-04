@@ -6,7 +6,7 @@ function AppBanner() {
     const { displayName } = userData;
 
     return (
-        <h3>Welcome, {displayName}!</h3>
+        <h1>Welcome, {displayName}!</h1>
     )
 }
 
