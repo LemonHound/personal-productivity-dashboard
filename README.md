@@ -16,7 +16,7 @@ Though NPM is automatically included in the Node.js package, it needs to be inst
 If you're more of a UI kind of person, you can download and install SQLite from the open source website:  https://www.sqlite.org/download.html
 
 Alternatively, you can download and install it using terminal, cmd, or git bash:
-- `npm install sqlite3`
+-- `npm install sqlite3`
 
 ### CORS
 CORS is a package used for enabling Cross-Origin Resource Sharing in Express.js applications, which allows you to make requests from one domain to another domain in the browser.
@@ -49,7 +49,7 @@ Runs the SQLite database.
 You will either need to navigate to the /database/ folder with terminal before running this command, or include the folder path from the current location.
 
 For example, if you open terminal in the /src/ folder, you could run the command like this:
-node .\Database\database.js
+-- `node .\Database\database.js`
 
 
 ## Additional Scripts and Tools
