@@ -11,7 +11,7 @@ const db = new sqlite3.Database('./database.db');
 
 const PORT = process.env.PORT || 3001;
 
-// Function to read query details from the lookup file
+// Function to locate query
 const getQueryDetails = (queryName) => {
     try {
         const lookupData = fs.readFileSync(path.join(__dirname, 'sql', 'queries', 'SQL_query_definitions.json'), 'utf8');
@@ -23,7 +23,7 @@ const getQueryDetails = (queryName) => {
     }
 };
 
-// Function to read SQL queries from files
+// Function to read SQL query from file
 const readQueryFromFile = async (queryName) => {
     const queryDetails = getQueryDetails(queryName);
     if (!queryDetails) {
@@ -32,6 +32,8 @@ const readQueryFromFile = async (queryName) => {
 
     const { folder, query } = queryDetails;
     const filePath = path.join(__dirname, folder, query);
+
+    console.log(filePath);
 
     try {
         const query = await fs.promises.readFile(filePath, 'utf8');
@@ -82,6 +84,24 @@ app.get('/api/Tasks/GetAllTasks', async (req, res) => {
         res.status(500).json({ error: "Error reading query from file" });
     }
 
+});
+
+app.get('/api/Goals/GetAllGoals', async (req, res) => {
+
+    try {
+        const query = await readQueryFromFile("GoalsDownloadByUser");
+        db.all(query, (err, rows) => {
+            if (err) {
+                console.log("fatal error with the query GoalsDownloadByUser");
+                res.status(500).json({ error: err.message });
+                return;
+            }
+            res.json(rows);
+        })
+    } catch (error) {
+        console.error("Error reading query from file: ", error);
+        res.status(500).json({ error: "Error reading query from file" });
+    }
 });
 
 /*
