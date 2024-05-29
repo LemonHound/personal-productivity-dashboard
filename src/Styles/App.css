@@ -51,6 +51,7 @@
     flex-direction: row;
 }
 
+
 .flex-header {
     background-color: var(--background-dark);
     color: var(--text-light);
@@ -73,11 +74,57 @@
     flex: 3;
 }
 
-.task{
-    border: solid;
-    border-width: 1px;
+.task-list-page {
+    padding: 20px;
 }
 
+.goal-tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.goal-tab {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .goal-tab.active {
+        background-color: green;
+    }
+
+.task {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+    .task h3 {
+        margin-top: 0;
+    }
+
+    .task p {
+        margin: 5px 0;
+    }
+
+    .task ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .task li {
+        border-top: 1px solid #ccc;
+        padding: 10px 0;
+    }
+
+        .task li:first-child {
+            border-top: none;
+        }
 
 /*
     Modals
@@ -114,16 +161,23 @@ nav {
     justify-content: space-between;
     padding: 2%;
     border-radius: 0px;
+    display: flex;
+    flex-direction: row;
 }
 
-.nav-brand {
+.nav-welcome {
     background-color: var(--background-dark);
     color: var(--text-light);
-    color: var(--text-light);
-    background-color: var(--background);
+}
+.nav-links a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--text-dark);
+    background-color: var(--background-light);
 }
 
-.nav-options a {
+.nav-user-profile a {
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -135,6 +189,7 @@ nav {
 /*
     User Interface
 */
+
 
 button {
     background-color: var(--button-light);

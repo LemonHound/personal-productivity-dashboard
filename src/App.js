@@ -16,16 +16,16 @@ function App() {
         <>
             <UserContextProvider>
                 <BrowserRouter>
-                    <nav className="flex">
-                        <div className="nav-brand">
+                    <nav className="nav">
+                        <div className="nav-welcome">
                             <AppBanner />
                         </div>
-                        <div className="nav-options">
+                        <div className="nav-links">
                             <Link to="/">Home</Link>&nbsp;
                             <Link to="/Projects">Ongoing Projects</Link>&nbsp;
                             <Link to="/Contributors">Contributors</Link>&nbsp;
                         </div>
-                        <div className="nav-options">
+                        <div className="nav-user-profile">
                             <Link to="/SignIn">Sign In</Link>
                         </div>
                     </nav>
