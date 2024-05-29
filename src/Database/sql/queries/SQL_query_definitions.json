@@ -1,10 +1,14 @@
 {
   "FullUserDownload": {
     "folder": "/sql/queries/Users/",
-    "query": "FullUserDownload.sql"
+    "query": "FullUserDownload"
   },
   "FullTaskDownload": {
     "folder": "/sql/queries/Tasks/",
-    "query": "FullTaskDownload.sql"
+    "query": "FullTaskDownload"
+  },
+  "GoalsDownloadByUser": {
+    "folder": "/sql/queries/Goals/",
+    "query": "GetAllGoals"
   }
 }
