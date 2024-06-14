@@ -35,7 +35,7 @@ AXIOS is a popular JavaScript library used for making HTTP requests from a web b
 
 To boot up our website, you'll need to run two different terminals.  One will host our website, and the other will host the SQLite database.
 
-### `npm start`
+### `npm start client`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -43,13 +43,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `node database.js`
+### `npm start server`
 
-Runs the SQLite database.
-You will either need to navigate to the /database/ folder with terminal before running this command, or include the folder path from the current location.
-
-For example, if you open terminal in the /src/ folder, you could run the command like this:
--- `node .\Database\database.js`
+Runs the SQLite database.  This script is included in the Package.json file and can be run for convenience.  However, you can also start up the server directly.
+To do so, run the following command after navigating to the /Database/ folder:
+`node database.js`
 
 
 ## Additional Scripts and Tools
